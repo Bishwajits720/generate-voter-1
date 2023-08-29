@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Voter Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #e0f7fa; /* Light blue background color */
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            height: 38px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db; /* Blue button color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9; /* Darker hover color */
+        }
+    </style>
+</head>
+<body style="background-color: lightblue;">
+    <h1>Generate Voter Form - ODIA</h1>
+    <form action="/generate-voter" method="post" enctype="multipart/form-data">
+        <label for="voterNumber">Voter Number:</label>
+        <input type="text" id="voterNumber" name="voterNumber" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="nameOdia">Name in Odia:</label>
+        <input type="text" id="nameOdia" name="nameOdia"><br>
+
+        <label for="nameFather">Father's Name:</label>
+        <input type="text" id="nameFather" name="nameFather" required><br>
+
+        <label for="nameOdiaFather">Father's Name in Odia:</label>
+        <input type="text" id="nameOdiaFather" name="nameOdiaFather"><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br>
+
+        <label for="addressOdia">Address in Odia:</label>
+        <textarea id="addressOdia" name="addressOdia"></textarea><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
+
+        <label for="voterDate">Voter Date:</label>
+        <input type="date" id="voterDate" name="voterDate" required><br>
+
+        <label for="ConstituencyNoName">Constituency Number and Name:</label>
+        <input type="text" id="ConstituencyNoName" name="ConstituencyNoName" required><br>
+
+        <label for="ConstituencyNoNameOdia">Constituency Number and Name in Odia:</label>
+        <input type="text" id="ConstituencyNoNameOdia" name="ConstituencyNoNameOdia"><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <input type="submit" value="Generate PDF">
+    </form>
+</body>
+</html>
