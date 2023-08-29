@@ -1,4 +1,4 @@
-FROM openjdk:17-jre-alpine
+FROM openjdk:17-jre
 WORKDIR /app
 COPY target/Pdf-Generator-0.0.1-SNAPSHOT.jar app.jar
 
